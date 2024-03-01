@@ -6,7 +6,7 @@ img.onload = function () {
 
 let canvas = document.querySelector('canvas');
 let ctx = canvas.getContext('2d');
-const scale = 2;
+const scale = 1;
 const width = 32;
 const height = 52;
 const scaledWidth = width * scale;
@@ -41,7 +41,7 @@ function step() {
     frameCount = 0;
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawFrame(cycleLoop[currentLoopIndex], 0, steps++, 0);
+    drawFrame(cycleLoop[currentLoopIndex], 0, steps++, 16);
 
     currentLoopIndex++;
     if (currentLoopIndex >= cycleLoop.length) {
